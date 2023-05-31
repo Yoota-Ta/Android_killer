@@ -30,7 +30,6 @@ https://apkpure.com/
 <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
 
-
 添加:
 android:exported="false" 
 android:exported="true"
@@ -86,19 +85,13 @@ Lcom/zczc/wallify
 修改应用名
 ```
 
-
-
 ### apk转aab
 
 ```
  工具
  https://github.com/sensei-z/APK2AAB
  
- *** 安装 路径不要有中文,apk包放在工具路径下，都不要中文,路径以及名称不能有空格
- 
- 
- https://github.com/37sy/build_aab_tool
- 
+ 安装 路径不要有中文,apk包放在工具路径下，都不要中文,路径以及名称不能有空格
 ```
 
 * 注意这里需要jdk1.8，版本不能高 
@@ -114,8 +107,6 @@ JAVA_HOME=D:\Android\sdk_adr
 ### 生成jks 证书
 
 ```
-
-
 keytool -genkeypair -alias <别名> -keyalg RSA -keypass <密码> -keystore <签名文件名>.jks -storepass <密码> -deststoretype pkcs12  <文件保存路径(可有可无)> 
 
 示例
@@ -124,8 +115,6 @@ keytool -genkeypair -alias sqa123456 -keyalg RSA -validity 36500 -keypass 123456
 获取jks信息
 keytool -list -keystore sqa123456.jks
 ```
-
-
 
 ### aab签名
 
@@ -176,10 +165,6 @@ java -jar bundletool-all-1.14.0.jar build-apks
 apks 解压后有一个跟原来大小一致的apk，安装测试即可
 ```
 
-
-
-
-
 ### 隐私协议地址
 
 ```
@@ -189,11 +174,7 @@ https://sites.google.com/
 复制链接
 https://sites.google.com/view/lovewallify/%E9%A6%96%E9%A1%B5
 
-
-
 ```
-
-
 
 ### 需要素材
 
@@ -202,20 +183,3 @@ https://sites.google.com/view/lovewallify/%E9%A6%96%E9%A1%B5
 1024*500       置顶大图
 320~3840像素   2 到 8 张手机屏幕截图
 ```
-
-
-
-### google store 切换语言
-
-```
-https://myaccount.google.com/language?continue=https%3A%2F%2Fmyaccount.google.com%2Fsecurity%3Fpmr%3D1
-```
-
-![](./img/016.png)
-
-### google play
-
-```
-https://play.google.com/console/u/0/developers/6485965189370576455/app-list
-```
-
