@@ -1,3 +1,17 @@
+##  说明
+
+主要是工具版本有点老，对相关的依赖进行了升级，目前测试逆向，功能正常
+
+## 鸣谢
+
+- [APK2AAB](https://github.com/sensei-z/APK2AAB)
+
+- [AndroidKiller](https://github.com/liaojack8/AndroidKiller)
+
+
+
+------
+
 
 
 ### apk下载
