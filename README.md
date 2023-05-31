@@ -114,8 +114,15 @@ JAVA_HOME=D:\Android\sdk_adr
 ### 生成jks 证书
 
 ```
-keytool -genkey -alias ali -keyalg RSA  -keysize 2048 -validity 36500 -keystore jks.jks
 
+
+keytool -genkeypair -alias <别名> -keyalg RSA -keypass <密码> -keystore <签名文件名>.jks -storepass <密码> -deststoretype pkcs12  <文件保存路径(可有可无)> 
+
+示例
+keytool -genkeypair -alias sqa123456 -keyalg RSA -validity 36500 -keypass 123456 -keystore 123456.jks -storepass 123456 -deststoretype pkcs12
+
+获取jks信息
+keytool -list -keystore sqa123456.jks
 ```
 
 
@@ -140,8 +147,8 @@ key=
 [signinfo]
 keystore-path=E:\androidPrj\jks\Test001.jks
 alias=ali
-password=sqa123456
-alias-pwd=sqa123456
+password=123456
+alias-pwd=123456
 
 ```
 
@@ -157,9 +164,9 @@ java -jar bundletool-all-1.14.0.jar build-apks
 --bundle=xxx.aab 
 --output=xxx.apks 
 --ks=xxxx.jks 
---ks-pass=pass:sqa123456 
+--ks-pass=pass:123456 
 --ks-key-alias=ali 
---key-pass=pass:sqa123456
+--key-pass=pass:123456
 
 ```
 
